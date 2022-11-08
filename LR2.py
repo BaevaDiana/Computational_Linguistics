@@ -129,7 +129,7 @@ def morphNumber(text):
     p = morph.parse(text)[0]
     print(str(n) + " " + str(p.make_agree_with_number(n).word))
 
-
+#взаимодействие с пользователем,обращение к другим функциям
 def menu():
     print(" Выберите пункт из  меню: ")
     print('''\t1 - Морфологический анализ;
