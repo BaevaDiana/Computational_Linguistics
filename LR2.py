@@ -99,7 +99,7 @@ def morphAnalyzer(text):
     print('Лицо:', dictPerson[p.tag.person])
     print('Время:', dictTense[p.tag.tense])
 
-#функция для взаимодействия с пользователем
+#функция для склонения слова/получения лексемы
 def morphInflect(text):
     print("Выберите из списка:")
     print('''\t1. Склонение;
