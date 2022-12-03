@@ -1,18 +1,17 @@
 import nltk
 from nltk import download #скачивание списка стоп-слов
-download('stopwords')
-nltk.download('punkt')
+#download('stopwords')
+#nltk.download('punkt')
 from nltk import sent_tokenize  #разделение входного текста на предложения
-from nltk import word_tokenize  #разделение вводного текста предложений на слова
+from nltk import word_tokenize  #разделение входного текста предложений на слова
 from nltk.corpus import stopwords
 
-file = open("DataSet.txt","r",encoding="utf8")
+file = open("DataSet.txt","r",encoding="utf8") #открытие файла ДатаСета
 text = file.readlines()
 count = 1 #переменная для нумерации предложений
 
 st_words = set(stopwords.words('russian')) #список русских стоп-слов
 
-# каждую строчку текста разбиваем на предложения(слова), потом выводим
 for el in text:
     sentences = sent_tokenize(el) #строку разбиваем на предложения
     for i in range(len(sentences)):#идём по строке
